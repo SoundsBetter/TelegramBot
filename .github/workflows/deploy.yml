@@ -1,0 +1,20 @@
+name: Deploy Bot
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install dependencies
+        run: |
+          python3 -m pip install --upgrade pip
+          pip3 install pyTelegramBotAPI
+          pip3 install openai
+      - name: Start bot
+        run: |
+          python3 bot.py
