@@ -1,4 +1,4 @@
-import telebot
+import telebo
 import openai
 import os
 
