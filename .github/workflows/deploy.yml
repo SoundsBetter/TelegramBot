@@ -3,7 +3,7 @@ name: Deploy Bot
 on:
   push:
     branches:
-      - TelegramBot
+      - master
 
 jobs:
   deploy:
