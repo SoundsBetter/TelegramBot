@@ -2,19 +2,28 @@ name: Deploy Bot
 
 on:
   push:
-    branches:
-      - main
+    branches: [ master ]
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - name: Install dependencies
-        run: |
-          python3 -m pip install --upgrade pip
-          pip3 install pyTelegramBotAPI
-          pip3 install openai
-      - name: Start bot
-        run: |
-          python3 bot.py
+    - name: Checkout code
+      uses: actions/checkout@v2
+      
+    - name: Set up Python 3.x
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.x
+      
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install python-telegram-bot openai
+      
+    - name: Deploy
+      env:
+        BOT_TOKEN: ${{ secrets.5810943249:AAHbif8y0ZMnzcOlqaFuzvLwXrKw68IHmZM }}
+        OPENAI_API_KEY: ${{ secrets.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 }}
+      run: |
+        python bot.py
