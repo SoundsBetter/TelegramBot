@@ -25,4 +25,4 @@ def get_answer(message):
     answer = completion.choices[0].text.strip()
     bot.reply_to(message, answer)
 
-bot.polling()
+bot.polling(
