@@ -23,7 +23,7 @@ jobs:
       
     - name: Deploy
       env:
-        BOT_TOKEN: ${{ secrets.5810943249:AAHbif8y0ZMnzcOlqaFuzvLwXrKw68IHmZM }}
-        OPENAI_API_KEY: ${{ secrets.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 }}
+        BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
+        OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
       run: |
         python bot.py
