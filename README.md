@@ -1,6 +1,6 @@
 # TelegramBot
-testing telegram bot
+testing telegramghffhgg
 
 This is my first repository
 
-I'm study to coding and experement with telegram bots :robot:
+I'm study to coding and experiments with telegram bot
