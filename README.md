@@ -3,4 +3,4 @@ testing telegramghffhgg
 
 This is my first repository
 
-I'm study to coding and experiments with telegram bot
+I'm study to coding and experiments with telegram bot 🤖
